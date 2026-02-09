@@ -38,7 +38,7 @@ class FstViewController: UIViewController {
         return label
     }()
     
-    private lazy var button: UIButton = {
+    private lazy var first_button: UIButton = {
         let button = UIButton()
         button.setTitle("Ввести имя", for: .normal)
         button.setTitleColor(.white, for: .normal)
@@ -49,10 +49,27 @@ class FstViewController: UIViewController {
         button.layer.masksToBounds = true
         button.addAction(
             .init { [weak self] _ in
-                self?.goNext()
+                self?.go_second_view_controller()
             }, for: .touchUpInside)
         return button
     }()
+    
+    private lazy var second_button: UIButton = {
+        let button = UIButton()
+        button.setTitle("Выбрать день недели", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        button.backgroundColor = .systemBlue
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.layer.cornerRadius = 12
+        button.layer.masksToBounds = true
+        button.addAction(
+            .init { [weak self] _ in
+                self?.go_third_view_controller()
+            }, for: .touchUpInside)
+        return button
+    }()
+    
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -100,19 +117,28 @@ class FstViewController: UIViewController {
             resultLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36)
         ])
         
-        view.addSubview(button)
+        view.addSubview(first_button)
         
         NSLayoutConstraint.activate([
-            button.heightAnchor.constraint(equalToConstant: 56),
-            button.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 140),
-            button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
-            button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36)
+            first_button.heightAnchor.constraint(equalToConstant: 56),
+            first_button.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 140),
+            first_button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
+            first_button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36)
+        ])
+        
+        view.addSubview(second_button)
+        
+        NSLayoutConstraint.activate([
+            second_button.heightAnchor.constraint(equalToConstant: 56),
+            second_button.topAnchor.constraint(equalTo: first_button.bottomAnchor, constant: 20),
+            second_button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
+            second_button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36)
         ])
         
         
     }
     
-    private func goNext() {
+    private func go_second_view_controller() {
         let controller = ScndViewController()
         controller.title = "Регистрация имени"
         controller.name = "Введите имя"
@@ -121,5 +147,11 @@ class FstViewController: UIViewController {
         }
         navigationController?.pushViewController(controller, animated: true)
         
+    }
+    
+    private func go_third_view_controller() {
+        let controller = TrdViewController()
+        controller.title = "Выбрать день недели"
+        navigationController?.pushViewController(controller, animated: true)
     }
 }

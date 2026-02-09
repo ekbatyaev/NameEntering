@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		063232C52F39C0C1008607FE /* TrdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 063232C42F39C0B0008607FE /* TrdViewController.swift */; };
 		F69DF7AA2F240F06002474AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF7A92F240F06002474AA /* AppDelegate.swift */; };
 		F69DF7AC2F240F06002474AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF7AB2F240F06002474AA /* SceneDelegate.swift */; };
 		F69DF7B32F240F07002474AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69DF7B22F240F07002474AA /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		063232C42F39C0B0008607FE /* TrdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrdViewController.swift; sourceTree = "<group>"; };
 		F69DF7A62F240F06002474AA /* NameEntering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameEntering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69DF7A92F240F06002474AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F69DF7AB2F240F06002474AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		F69DF7E62F240F49002474AA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				063232C42F39C0B0008607FE /* TrdViewController.swift */,
 				F6AF3E6B2F2DDB4900DA2FC4 /* ScndViewController.swift */,
 				F6AF3E692F2DDB3A00DA2FC4 /* FstViewController.swift */,
 			);
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				063232C52F39C0C1008607FE /* TrdViewController.swift in Sources */,
 				F69DF7AA2F240F06002474AA /* AppDelegate.swift in Sources */,
 				F6AF3E6A2F2DDB4200DA2FC4 /* FstViewController.swift in Sources */,
 				F6AF3E6C2F2DDB5200DA2FC4 /* ScndViewController.swift in Sources */,

@@ -7,18 +7,12 @@
 
 import UIKit
 
-protocol ScndViewControllerDelagate: AnyObject {
-    func setText(_ text: String)
-}
-
 class ScndViewController: UIViewController {
     
     // MARK: - Properties
     
     var name: String?
     var setTextAction: ((String) -> Void)?
-    
-    weak var delegate: ScndViewControllerDelagate?
     
     // MARK: - Subviews
     
