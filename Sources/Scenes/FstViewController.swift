@@ -20,8 +20,7 @@ class FstViewController: UIViewController {
         let label = UILabel()
         label.text = "Ворона HSE 🐦‍⬛"
         label.textAlignment = .center
-        label.font = .systemFont(ofSize: 50,weight: .bold )
-        
+        label.font = .systemFont(ofSize: 50, weight: .bold)
         label.textColor = .black
         label.backgroundColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -70,7 +69,6 @@ class FstViewController: UIViewController {
         return button
     }()
     
-    
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -88,54 +86,44 @@ class FstViewController: UIViewController {
     // MARK: - Methods
     
     private func configureUI() {
-        
         view.backgroundColor = .white
         
         view.addSubview(label)
-        
-        NSLayoutConstraint.activate([
-            label.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
-            label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
-        ])
-        
         view.addSubview(imageView)
-        
-        NSLayoutConstraint.activate([
-            imageView.heightAnchor.constraint(equalToConstant: 200),
-            imageView.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 50),
-            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
-        ])
-        
         view.addSubview(resultLabel)
-        
-        NSLayoutConstraint.activate([
-            resultLabel.heightAnchor.constraint(equalToConstant: 56),
-            resultLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 60),
-            resultLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
-            resultLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36)
-        ])
-        
         view.addSubview(first_button)
-        
-        NSLayoutConstraint.activate([
-            first_button.heightAnchor.constraint(equalToConstant: 56),
-            first_button.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 140),
-            first_button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
-            first_button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36)
-        ])
-        
         view.addSubview(second_button)
         
         NSLayoutConstraint.activate([
+            // Label
+            label.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50),
+            label.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            
+            // ImageView
+            imageView.heightAnchor.constraint(equalToConstant: 200),
+            imageView.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 30),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            
+            // ResultLabel
+            resultLabel.heightAnchor.constraint(equalToConstant: 56),
+            resultLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 30),
+            resultLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
+            resultLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36),
+            
+            // First Button
+            first_button.heightAnchor.constraint(equalToConstant: 56),
+            first_button.topAnchor.constraint(equalTo: resultLabel.bottomAnchor, constant: 30),
+            first_button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
+            first_button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36),
+            
+            // Second Button - ИСПРАВЛЕНО!
             second_button.heightAnchor.constraint(equalToConstant: 56),
             second_button.topAnchor.constraint(equalTo: first_button.bottomAnchor, constant: 20),
             second_button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 36),
             second_button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -36)
         ])
-        
-        
     }
     
     private func go_second_view_controller() {
@@ -146,7 +134,6 @@ class FstViewController: UIViewController {
             self?.resultLabel.text = "Привет, \(text)!"
         }
         navigationController?.pushViewController(controller, animated: true)
-        
     }
     
     private func go_third_view_controller() {
