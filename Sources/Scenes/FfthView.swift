@@ -41,7 +41,6 @@ struct FfthView: View {
                             index: index + 1,
                             isSelected: selectedDay == day,
                             onTap: {
-                                // ЭТО ВАЖНО - обновляем selectedDay при нажатии
                                 withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
                                     selectedDay = day
                                 }

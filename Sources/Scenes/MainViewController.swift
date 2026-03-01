@@ -38,6 +38,12 @@ class MainViewController: UIViewController {
         return vc
     }()
     
+    private lazy var collection4ViewController: UIViewController = {
+        let vc = HolidayViewController()
+        return vc
+    }()
+    
+    
     private var currentViewController: UIViewController?
     
     // MARK: - Subviews
@@ -129,6 +135,8 @@ class MainViewController: UIViewController {
             newViewController = collection2ViewController
         case 3:
             newViewController = collection3ViewController
+        case 4:
+            newViewController = collection4ViewController
         default:
             return
         }

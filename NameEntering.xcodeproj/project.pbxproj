@@ -12,6 +12,7 @@
 		0673BF6B2F44688B0084FE40 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0673BF6A2F4468840084FE40 /* MainViewController.swift */; };
 		0673BF6D2F4469670084FE40 /* FthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0673BF6C2F4469590084FE40 /* FthViewController.swift */; };
 		0673BF6F2F4469830084FE40 /* FfthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0673BF6E2F4469780084FE40 /* FfthView.swift */; };
+		06D6A7B32F548E8100DF26FA /* HolidayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D6A7B22F548E7900DF26FA /* HolidayViewController.swift */; };
 		F69DF7AA2F240F06002474AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF7A92F240F06002474AA /* AppDelegate.swift */; };
 		F69DF7AC2F240F06002474AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69DF7AB2F240F06002474AA /* SceneDelegate.swift */; };
 		F69DF7B32F240F07002474AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69DF7B22F240F07002474AA /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 		0673BF6A2F4468840084FE40 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0673BF6C2F4469590084FE40 /* FthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FthViewController.swift; sourceTree = "<group>"; };
 		0673BF6E2F4469780084FE40 /* FfthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FfthView.swift; sourceTree = "<group>"; };
+		06D6A7B22F548E7900DF26FA /* HolidayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayViewController.swift; sourceTree = "<group>"; };
 		F69DF7A62F240F06002474AA /* NameEntering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameEntering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69DF7A92F240F06002474AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F69DF7AB2F240F06002474AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		F69DF7E62F240F49002474AA /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				06D6A7B22F548E7900DF26FA /* HolidayViewController.swift */,
 				0673BF6E2F4469780084FE40 /* FfthView.swift */,
 				0673BF6C2F4469590084FE40 /* FthViewController.swift */,
 				0673BF6A2F4468840084FE40 /* MainViewController.swift */,
@@ -281,6 +284,7 @@
 				0673BF6B2F44688B0084FE40 /* MainViewController.swift in Sources */,
 				063232C52F39C0C1008607FE /* TrdViewController.swift in Sources */,
 				0673BF692F4468090084FE40 /* TaskBarViewController.swift in Sources */,
+				06D6A7B32F548E8100DF26FA /* HolidayViewController.swift in Sources */,
 				0673BF6D2F4469670084FE40 /* FthViewController.swift in Sources */,
 				F69DF7AA2F240F06002474AA /* AppDelegate.swift in Sources */,
 				F6AF3E6A2F2DDB4200DA2FC4 /* FstViewController.swift in Sources */,

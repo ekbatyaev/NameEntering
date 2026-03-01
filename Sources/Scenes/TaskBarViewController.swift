@@ -57,6 +57,12 @@ class TaskBarViewController: UIViewController {
         tag: 3
     )
     
+    private lazy var fourthButton: UIButton = createButton(
+        title: "Праздники",
+        imageName: "sun.max",
+        tag: 4
+    )
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -73,7 +79,7 @@ class TaskBarViewController: UIViewController {
         view.addSubview(backgroundView)
         view.addSubview(stackView)
         
-        [homeButton, firstButton, secondButton, thirdButton].forEach {
+        [homeButton, firstButton, secondButton, thirdButton, fourthButton].forEach {
             stackView.addArrangedSubview($0)
         }
         
@@ -121,7 +127,7 @@ class TaskBarViewController: UIViewController {
     func selectButton(at index: Int) {
         selectedIndex = index
         
-        [homeButton, firstButton, secondButton, thirdButton].enumerated().forEach { (i, button) in
+        [homeButton, firstButton, secondButton, thirdButton, fourthButton].enumerated().forEach { (i, button) in
             button.tintColor = i == index ? .white : .lightGray
         }
     }
